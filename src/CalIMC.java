@@ -16,11 +16,17 @@ public class CalIMC extends JPanel {
 
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new GridLayout(2, 2));
+        inputPanel.setBackground(Color.decode("#a7e5eb"));
+
 
         pesoLabel = new JLabel("Peso (kg):");
         alturaLabel = new JLabel("Altura (m):");
+
         pesoTextField = new JTextField(10);
         alturaTextField = new JTextField(10);
+        
+        pesoTextField.setBackground(Color.decode("#cee8eb"));
+        alturaTextField.setBackground(Color.decode("#cee8eb"));
 
         inputPanel.add(pesoLabel);
         inputPanel.add(pesoTextField);
@@ -28,6 +34,9 @@ public class CalIMC extends JPanel {
         inputPanel.add(alturaTextField);
 
         botao = new JButton("Calcular IMC");
+        botao.setBackground(Color.decode("#127382"));// Define a cor do botao para azul
+        botao.setForeground(Color.WHITE);               // Define a cor do texto do botão para branco
+        this.setBackground(Color.decode("#cee8eb"));
         botao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
